@@ -5,7 +5,8 @@ module.exports = {
         nonProductionBaseUrl: "https://staging.maxpack.co.uk/",
         pathsToTest: [
             "/",
-            //"/kitchen-sink",
+            "/about-us/",
+            "/kitchen-sink",
         ]
     }
 };
