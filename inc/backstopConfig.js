@@ -5,7 +5,7 @@ const leadingSlashIt = require('./utils').leadingSlashIt;
 module.exports = function backstopConfig(nonProductionBaseUrl, productionBaseUrl, pathsToTest, siteName) {
 
     const backstopDataDir = `backstop_data/${siteName}`;
-    const delayTime = 1500;
+    const delayTime = 2000;
     const acceptableThreshold = 0.1;
 
     const config = {
@@ -34,7 +34,7 @@ module.exports = function backstopConfig(nonProductionBaseUrl, productionBaseUrl
             'readyEvent': null,
             'delay': delayTime,
             'misMatchThreshold': acceptableThreshold,
-            'scrollToSelector' : '#header'
+            'scrollToSelector' : '#header',
         }],
         'paths': {
             'ci_report': `${backstopDataDir}/ci_report`,

@@ -1,6 +1,6 @@
 {
     "parserOptions": {
-        "ecmaVersion": 6,
+        "ecmaVersion": 8,
         "sourceType": "module"
     },
     "env": {
@@ -9,7 +9,7 @@
     "extends": "eslint:recommended",
     "rules": {
         "semi": 2,
-	"no-unused-vars": 2,
-	"no-console": 0
+	    "no-unused-vars": 2,
+	    "no-console": 0
     }
 }
