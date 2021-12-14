@@ -10,17 +10,11 @@ module.exports = {
     },
     "wordpress-at-scale": {
         label: "WordPress at Scale",
-        productionBaseUrl: "https://scalewp.io/",
-        nonProductionBaseUrl: "https://dev-wp-microsite.pantheonsite.io/",
+        productionBaseUrl: "https://www.maxpack.co.uk/",
+        nonProductionBaseUrl: "https://staging.maxpack.co.uk/",
         pathsToTest: [
-            "/resources",
-            "/elastic-architecture",
-            "/page-caching",
-            "/object-caching",
-            "/query-performance",
-            "/searching-for-scale",
-            "/a-real-world-scalable-architecture",
-            "/development-and-workflow",
+            "/",
+            "/kitchen-sink",
         ]
     }
 };
