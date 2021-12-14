@@ -26,7 +26,7 @@ module.exports = function backstopConfig(nonProductionBaseUrl, productionBaseUrl
             'label': 'Homepage',
             'url': trailingSlashIt(nonProductionBaseUrl),
             'referenceUrl': trailingSlashIt(productionBaseUrl),
-            'hideSelectors': [],
+            'hideSelectors': ['#demo-store'],
             'selectors': ['document'],
             'readyEvent': null,
             'delay': delayTime,
