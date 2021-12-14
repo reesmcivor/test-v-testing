@@ -28,7 +28,7 @@ jobs:
       run: |
         npm install
         npm run lint
-        npm run start -- --site=wordpress-at-scale
+        npm run start -- --site=maxpack
       env:
         CI: true
     - name: Archive BackstopJS artifacts
