@@ -41,6 +41,7 @@ module.exports = function (siteToTest) {
             log(colors.bgGreen(`Backstop JS tests passed for ${site.label}!`));
         }).catch(() => {
             log(colors.bgRed(colors.white(`Backstop JS tests failed for ${site.label}!`)));
+            process.exit(1);
         });
     }).catch(() => {
         log(colors.bgRed(colors.white(`Backstop JS tests failed for ${site.label}!`)));
