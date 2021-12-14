@@ -11,7 +11,7 @@ module.exports = function backstopConfig(nonProductionBaseUrl, productionBaseUrl
     const config = {
         'id': siteName,
         'onBeforeScript': './../../../inc/backstopBefore.js',
-        asyncCaptureLimit: 10,
+        asyncCaptureLimit: 5,
         'viewports': [{
                 'name': 'phone',
                 'width': 320,
