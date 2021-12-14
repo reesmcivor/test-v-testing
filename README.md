@@ -1,3 +1,5 @@
+
+
 # Visual Regression Testing Example Repository
 
 This repository is an example for Andrew Taylors talk/workshop Automating your QA with Visual Regression Testing and David Needham's talk/workshop Visual Regression Testing with BackstopJS. Andrew's slides that accompany this repository can be found [here](https://bit.ly/ataylorme-visual-regression-workshop) and David's can be found [here](https://visual-regression.davidneedham.me).
