@@ -10,6 +10,7 @@ module.exports = function backstopConfig(nonProductionBaseUrl, productionBaseUrl
 
     const config = {
         'id': siteName,
+        'onBeforeScript': './../../../inc/backstopBefore.js',
         asyncCaptureLimit: 10,
         'viewports': [{
                 'name': 'phone',
@@ -22,15 +23,18 @@ module.exports = function backstopConfig(nonProductionBaseUrl, productionBaseUrl
                 'height': 1080
             }
         ],
+        'removeSelectors': [
+            '#demo-store'
+        ],
         'scenarios': [{
             'label': 'Homepage',
             'url': trailingSlashIt(nonProductionBaseUrl),
             'referenceUrl': trailingSlashIt(productionBaseUrl),
-            'hideSelectors': ['#demo-store'],
             'selectors': ['document'],
             'readyEvent': null,
             'delay': delayTime,
-            'misMatchThreshold': acceptableThreshold
+            'misMatchThreshold': acceptableThreshold,
+            'scrollToSelector' : '#header'
         }],
         'paths': {
             'ci_report': `${backstopDataDir}/ci_report`,

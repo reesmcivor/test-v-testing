@@ -49,17 +49,25 @@ if (program.site) {
         });
     }
 
-    // Ask which site should be used
-    inquirer
-        .prompt([{
-            type: 'list',
-            name: 'site',
-            message: 'Which site do you want to test?',
-            choices: siteChoices
-        }])
-        .then(answers => {
-            if (Object.prototype.hasOwnProperty.call(answers, 'site')) {
-                visualRegressionTestSite(answers.site);
-            }
-        });
+    // Choose the first site if there is only one option
+    if(siteChoices.length == 1) {
+        visualRegressionTestSite(siteChoices[0].value);
+    } else {
+
+        // Ask which site should be used
+        inquirer
+            .prompt([{
+                type: 'list',
+                name: 'site',
+                message: 'Which site do you want to test?',
+                choices: siteChoices
+            }])
+            .then(answers => {
+                if (Object.prototype.hasOwnProperty.call(answers, 'site')) {
+                    visualRegressionTestSite(answers.site);
+                }
+            });    
+    }
+
+    
 }
