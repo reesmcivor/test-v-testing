@@ -11,7 +11,7 @@ module.exports = function backstopConfig(nonProductionBaseUrl, productionBaseUrl
     const config = {
         'id': siteName,
         'onBeforeScript': './../../../inc/backstopBefore.js',
-        asyncCaptureLimit: 5,
+        asyncCaptureLimit: 10,
         'viewports': [{
                 'name': 'phone',
                 'width': 320,
@@ -22,9 +22,6 @@ module.exports = function backstopConfig(nonProductionBaseUrl, productionBaseUrl
                 'width': 1920,
                 'height': 1080
             }
-        ],
-        'removeSelectors': [
-            '#demo-store'
         ],
         'scenarios': [{
             'label': 'Homepage',
@@ -55,12 +52,15 @@ module.exports = function backstopConfig(nonProductionBaseUrl, productionBaseUrl
 
 
     const scenarios = pathsToTest.map(function (path) {
-
         return {
             'label': path,
             'url': untrailingSlashIt(nonProductionBaseUrl) + leadingSlashIt(path),
             'referenceUrl': untrailingSlashIt(productionBaseUrl) + leadingSlashIt(path),
             'hideSelectors': [],
+            'removeSelectors': [
+                '#demo-store',
+                '.hero'
+            ],
             'selectors': ['document'],
             'readyEvent': null,
             'delay': delayTime,
